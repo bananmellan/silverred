@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -oue pipefail
 
-cp /usr/share/silverred/cosign.pub /usr/etc/pki/containers/silverred.pub
-
 rpm-ostree install \
 		   fish \
 		   darkman \
@@ -18,4 +16,9 @@ rpm-ostree install \
 		   libratbag-ratbagd \
 		   piper \
 		   libtree-sitter \
-		   libotf
+		   libotf \
+		   openssl \
+		   podman-compose
+
+mkdir -p /usr/etc/pki/containers
+cp /usr/share/silverred/cosign.pub /usr/etc/pki/containers/silverred.pub
