@@ -12,6 +12,9 @@ rpm-ostree install \
 		   evolution \
 		   gnome-tweaks \
 		   gnome-boxes \
+		   gnome-shell-extension-dash-to-dock \
+		   gnome-shell-extension-caffeine \
+		   gnome-shell-extension-system-monitor-applet \
 		   gpm-libs \
 		   inotify-tools \
 		   libadwaita \
@@ -24,7 +27,8 @@ rpm-ostree install \
 
 rpm-ostree override remove \
 		   firefox \
-		   firefox-langpacks
+		   firefox-langpacks \
+		   gnome-tour
 
 mkdir -p /usr/etc/pki/containers
 cp /usr/share/silverred/cosign.pub /usr/etc/pki/containers/silverred.pub
