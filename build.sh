@@ -20,7 +20,6 @@ rpm-ostree install \
 		   libadwaita \
 		   libratbag-ratbagd \
 		   piper \
-		   libtree-sitter \
 		   libotf \
 		   openssl \
 		   podman-compose
