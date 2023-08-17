@@ -2,4 +2,5 @@
 "Silverred" is my attempt at making my own custom OS based on Fedora Silverblue
 OCI images. The container image is built using Fedora's own [[quay.io/fedora-ostree-desktops/silverblue][OSTree Desktop
 Images]], but the code is /heavily/ inspired (or rather ripped off) from the
-[[https://universal-blue.org/][uBlue]] project, using their [[https://github.com/ublue-os/main][main]], [[https://github.com/ublue-os/config][config]] and [[https://github.com/ublue-os/startingpoint][starting point]] repositories.
+[[https://universal-blue.org/][Universal Blue (uBlue)]] project, using their [[https://github.com/ublue-os/main][main]], [[https://github.com/ublue-os/config][config]] and [[https://github.com/ublue-os/startingpoint][starting point]]
+repositories.
