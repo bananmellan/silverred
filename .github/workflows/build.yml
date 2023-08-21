@@ -4,13 +4,13 @@ on:
   merge_group:
   schedule:
     - cron: '0 5 * * *'  # 5 am everyday
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "**.md"
-      - "**.txt"
-      - "**.org"
+  # push:
+    # branches:
+      # - main
+    # paths-ignore:
+      # - "**.md"
+      # - "**.txt"
+      # - "**.org"
   workflow_dispatch:
 env:
     IMAGE_NAME: silverred
