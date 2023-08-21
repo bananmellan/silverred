@@ -1,1 +1,1 @@
-enable sr-apply.service
+disable sr-apply.service
