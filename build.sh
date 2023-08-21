@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 set -oue pipefail
 
+cp --preserve=timestamps -r /root/* /
+find /usr/share/silverred/scripts -type f -exec bash -c '
+chmod +x {} && cp {} /usr/local/bin/
+' \;
+
 rpm-ostree install \
+
+		   # Packages to install
 		   fish \
 		   distrobox \
 		   wireshark \
@@ -25,6 +32,8 @@ rpm-ostree install \
 		   podman-compose
 
 rpm-ostree override remove \
+
+		   # Packages to remove (override)
 		   firefox \
 		   firefox-langpacks \
 		   gnome-tour

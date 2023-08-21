@@ -1,0 +1,9 @@
+[Unit]
+Description=Apply silverred files that wont be applied by the OCI image.
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/sr-apply
+
+[Install]
+WantedBy=multi-user.target
