@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -oue pipefail
 
-cp --preserve=timestamps -r /root/* /
+cp --preserve=timestamps -r /tmp/root/* /
 find /usr/share/silverred/scripts -type f -exec bash -c '
 chmod +x {} && cp {} /usr/local/bin/
 ' \;
