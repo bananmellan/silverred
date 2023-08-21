@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
+
+# Exit on error.
 set -oue pipefail
 
-cp --preserve=timestamps -r /tmp/root/* /
-find /usr/share/silverred/scripts -type f -exec bash -c 'chmod +x {}' \;
-
+# Install packages.
 rpm-ostree install \
 		   fish \
 		   distrobox \
@@ -27,14 +27,20 @@ rpm-ostree install \
 		   openssl \
 		   podman-compose
 
+# Remove (override) packages.
 rpm-ostree override remove \
 		   firefox \
 		   firefox-langpacks \
 		   gnome-tour
 
+# Ensure scripts are executable.
+find /usr/share/silverred/scripts -type f -exec bash -c 'chmod +x {}' \;
+
+# Add public key.
 mkdir -p /usr/etc/pki/containers
 cp /usr/share/silverred/cosign.pub /usr/etc/pki/containers/silverred.pub
 
+# Enable update timers for ostree and flatpaks.
 systemctl enable rpm-ostreed-automatic.timer
 systemctl enable flatpak-system-update.timer
 systemctl --global enable flatpak-user-update.timer
