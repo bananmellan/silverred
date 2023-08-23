@@ -5,7 +5,6 @@ set -oue pipefail
 
 # Install packages.
 rpm-ostree install \
-                   emacs \
 		   fish \
 		   distrobox \
 		   wireshark \
