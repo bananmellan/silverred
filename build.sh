@@ -24,7 +24,8 @@ rpm-ostree install \
 		   piper \
 		   libotf \
 		   openssl \
-		   podman-compose
+		   podman-compose \
+		   pavucontrol
 
 # Remove (override) packages.
 rpm-ostree override remove \
