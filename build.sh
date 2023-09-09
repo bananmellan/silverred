@@ -3,11 +3,10 @@
 # Exit on error.
 set -oue pipefail
 
-# History expansion and extended globs on.
+# Enable extended globs.
 shopt -s extglob
-set -H
 
-# Remove unnecessary repos and keys.
+# Remove unnecessary (non-free) repos and keys.
 pushd /usr/etc/yum.repos.d && rm -f !(fedora*.repo) && popd
 rm -rf /usr/share/distribution-gpg-keys/rpmfusion
 
