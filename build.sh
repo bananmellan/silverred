@@ -25,8 +25,6 @@ else
 	echo RPMfusion key directory not found, skipping removal of these keys.
 fi
 
-# INCLUDED_PKGS=$(yq -r ".include|unique[]" /tmp/pkgs.yaml)
-# EXCLUDED_PKGS=$(yq -r ".exclude|unique[]" /tmp/pkgs.yaml)
 INCLUDED_PKGS=$(cat /tmp/pkgs.yaml | shyaml get-values include | uniq)
 EXCLUDED_PKGS=$(cat /tmp/pkgs.yaml | shyaml get-values exclude | uniq)
 
