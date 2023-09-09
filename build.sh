@@ -7,9 +7,9 @@ set -oue pipefail
 shopt -s extglob
 
 # Remove unnecessary (non-free) repos and keys.
-REPODIR=/etc/yum.repos.d
-if [ -d $REPODIR ]; then
-	pushd $REPODIR
+REPO_DIR=/etc/yum.repos.d
+if [ -d $REPO_DIR ]; then
+	pushd $REPO_DIR
 	echo Removing nonfree repos:
 	rm -vf !(fedora*.repo)
 	popd
@@ -17,46 +17,42 @@ else
 	echo Repo directory not found! Skipping removal of non-free repos.
 fi
 
-FUSIONKEYDIR=/usr/share/distribution-gpg-keys/rpmfusion
-if [ -d $FUSIONKEYDIR ]; then
+FUSION_KEY_DIR=/usr/share/distribution-gpg-keys/rpmfusion
+if [ -d $FUSION_KEY_DIR ]; then
 	echo Removing RPMfusion keys.
-	rm -rf $FUSIONKEYDIR
+	rm -rf $FUSION_KEY_DIR
 else
 	echo RPMfusion key directory not found, skipping removal of these keys.
 fi
 
-# Install packages.
-rpm-ostree install \
-		   fish \
-		   distrobox \
-		   wireshark \
-		   darkman \
-		   stow \
-		   android-tools \
-		   libtree-sitter \
-		   gnome-tweaks \
-		   gnome-boxes \
-		   gnome-shell-extension-dash-to-dock \
-		   gnome-shell-extension-caffeine \
-		   gnome-shell-extension-system-monitor-applet \
-		   gpm-libs \
-		   libgccjit \
-		   inotify-tools \
-		   libadwaita \
-		   libratbag-ratbagd \
-		   piper \
-		   libotf \
-		   openssl \
-		   podman-compose \
-		   pavucontrol
+# INCLUDED_PKGS=$(yq -r ".include|unique[]" /tmp/pkgs.yaml)
+# EXCLUDED_PKGS=$(yq -r ".exclude|unique[]" /tmp/pkgs.yaml)
+INCLUDED_PKGS=$(cat /tmp/pkgs.yaml | shyaml get-values include | uniq)
+EXCLUDED_PKGS=$(cat /tmp/pkgs.yaml | shyaml get-values exclude | uniq)
 
-# Remove (override) packages.
-rpm-ostree override remove \
-		   firefox \
-		   firefox-langpacks \
-		   gnome-tour \
-		   nvidia-gpu-firmware \
-		   virtualbox-guest-additions
+# Remove only packages that are actually installed.
+if [[ "${#EXCLUDED_PKGS}" -gt 0 ]]; then
+	EXCLUDED_PKGS=$(rpm -qa --queryformat='%{NAME} ' ${EXCLUDED_PKGS})
+fi
+
+# If there are packages to install AND remove, run it all in one go.
+if [[ "${#INCLUDED_PKGS}" -gt 0 && "${#EXCLUDED_PKGS}" -gt 0 ]]; then
+	rpm-ostree override \
+			   remove $EXCLUDED_PKGS \
+			   $(printf -- "--install=%s " $INCLUDED_PKGS)
+
+# If there are only packages to install.
+elif [[ "${#INCLUDED_PKGS}" -gt 0 && "${#EXCLUDED_PKGS}" -eq 0 ]]; then
+	rpm-ostree install $INCLUDED_PKGS
+
+# If there are only packages to remove (override).
+elif [[ "${#INCLUDED_PKGS}" -eq 0 && "${#EXCLUDED_PKGS}" -gt 0 ]]; then
+	rpm-ostree override remove $EXCLUDED_PKGS
+
+# If there are no intended package actions.
+else
+	echo No packages to install.
+fi
 
 # Ensure scripts are executable.
 find /usr/share/silverred/scripts -type f -exec bash -c 'chmod +x {}' \;

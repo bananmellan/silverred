@@ -1,0 +1,30 @@
+include:
+  - fish
+  - distrobox
+  - wireshark
+  - darkman
+  - stow
+  - android-tools
+  - libtree-sitter
+  - gnome-tweaks
+  - gnome-boxes
+  - gnome-shell-extension-dash-to-dock
+  - gnome-shell-extension-caffeine
+  - gnome-shell-extension-system-monitor-applet
+  - gpm-libs
+  - libgccjit
+  - inotify-tools
+  - libadwaita
+  - libratbag-ratbagd
+  - piper
+  - libotf
+  - openssl
+  - podman-compose
+  - pavucontrol
+exclude:
+  - firefox
+  - firefox-langpacks
+  - gnome-tour
+  - nvidia-gpu-firmware
+  - virtualbox-guest-additions
+  - gnome-software-rpm-ostree
