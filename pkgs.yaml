@@ -10,7 +10,6 @@ include:
   - gnome-tweaks
   - gnome-shell-extension-dash-to-dock
   - gnome-shell-extension-caffeine
-  - gnome-shell-extension-system-monitor-applet
   - gpm-libs
   - libgccjit
   - inotify-tools
