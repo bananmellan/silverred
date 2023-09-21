@@ -7,6 +7,7 @@ include:
   - tmux
   - android-tools
   - libtree-sitter
+  - gnome-console
   - gnome-tweaks
   - gnome-shell-extension-dash-to-dock
   - gnome-shell-extension-caffeine
@@ -26,3 +27,4 @@ exclude:
   - gnome-tour
   - nvidia-gpu-firmware
   - virtualbox-guest-additions
+  - gnome-terminal
