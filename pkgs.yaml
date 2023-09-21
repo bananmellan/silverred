@@ -27,4 +27,3 @@ exclude:
   - gnome-tour
   - nvidia-gpu-firmware
   - virtualbox-guest-additions
-  - gnome-terminal
