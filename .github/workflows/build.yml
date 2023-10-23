@@ -2,8 +2,8 @@ name: build-silverred
 on:
   pull_request:
   merge_group:
-  schedule:
-   - cron: '0 3 * * 1'  # 5 am everyday
+  # schedule:
+  #  - cron: '0 3 * * 1'  # 5 am everyday
   # push:
     # branches:
       # - main
