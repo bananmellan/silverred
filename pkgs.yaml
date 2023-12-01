@@ -1,5 +1,6 @@
 include:
   # OS
+  - binutils
   - fish
   - distrobox
   - wireshark
@@ -13,6 +14,7 @@ include:
   - virt-viewer
   - apg
   - lld
+  - libarchive
 
   # Development
   - emacs
