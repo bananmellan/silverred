@@ -11,6 +11,7 @@ include:
   - inotify-tools
 
   # Development
+  - emacs
   - clang
   - clang-tools-extra
   - cmake
