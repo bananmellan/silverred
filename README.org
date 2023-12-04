@@ -12,7 +12,11 @@ its derivatives/spins, ex. uBlue or Kinoite):
   $ rpm-ostree rebase ostree-unverified-registry:ghcr.io/bananmellan/silverred
 #+end_src
 After a reboot, your system should have the necessary public key installed in
-order to upgrade while also verifying the signatures on each release. It is also
+order to rebase to the signed version:
+#+begin_src bash
+  $ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/bananmellan/silverred
+#+end_src
+After running this command, rpm-ostree will verify the signature on each release. It is also
 possible to install the public key manually by downloading it and making an
 entry for ghcr.io/bananmellan in `/etc/containers/policy.json` which also points
 to the public key.
