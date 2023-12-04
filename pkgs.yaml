@@ -1,65 +1,45 @@
 include:
-  # OS
-  - binutils
-  - fish
-  - distrobox
-  - wireshark
-  - darkman
-  - stow
-  - tmux
-  - android-tools
-  - libtree-sitter
-  - inotify-tools
-  - jq
-  - virt-viewer
   - apg
-  - lld
-  - libarchive
-  - pam-u2f
-  - pamu2fcfg
-  - mpv
-
-  # Development
+  - binutils
   - clang
   - clang-tools-extra
   - cmake
-  - make
+  - darkman
+  - distrobox
+  - emacs
+  - fish
+  - gnome-console
+  - gnome-shell-extension-caffeine
+  - gnome-shell-extension-dash-to-dock
+  - gnome-tweaks
+  - inotify-tools
+  - jq
   - julia
+  - libadwaita
+  - libarchive
+  - libotf
+  - libratbag-ratbagd
+  - libtree-sitter
+  - lld
+  - make
+  - mpv
+  - nmap
+  - openssl
+  - pam-u2f
+  - pamu2fcfg
+  - pavucontrol
+  - piper
   - python3
   - python3-lsp-server
+  - stow
+  - tmux
+  - virt-viewer
 
-  # For Emacs
-  - emacs
-  - gpm-libs
-  - libgccjit
-  - libvterm
-  - libtool
-
-  # Gnome
-  - gnome-boxes
-  - gnome-console
-  - gnome-tweaks
-  
-  ## Extensions
-  - gnome-shell-extension-dash-to-dock
-  - gnome-shell-extension-caffeine
-
-  # Misc
-  - libadwaita
-  - libotf
-  - openssl
-  - pavucontrol
-  - neovim
-  
-  ## Mouse configuration tool
-  - piper
-  - libratbag-ratbagd
-
-  # Network
-  - nmap
 exclude:
   - firefox
   - firefox-langpacks
+  - gnome-terminal
+  - gnome-terminal-nautilus
   - gnome-tour
   - nvidia-gpu-firmware
   - virtualbox-guest-additions
