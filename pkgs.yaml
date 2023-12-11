@@ -38,6 +38,7 @@ include:
   - tmux
   - virt-viewer
   - wireguard-tools
+  - qemu
 
 exclude:
   - firefox
