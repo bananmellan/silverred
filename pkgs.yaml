@@ -42,6 +42,8 @@ include:
   - qemu-kvm
   - NetworkManager-l2tp
   - wireshark
+  - htop
+  - nmon
 
 exclude:
   - firefox
