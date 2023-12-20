@@ -55,6 +55,9 @@ fi
 # Ensure ld exe is present in path
 ln -s /usr/bin/ld.lld /usr/local/bin/ld
 
+# Make fish the default shell
+sed -i 's/bin\/bash/bin\/fish/' /usr/etc/default/useradd
+
 # Ensure scripts are executable.
 find /usr/share/silverred/scripts -type f -exec bash -c 'chmod +x {}' \;
 
