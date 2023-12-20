@@ -9,12 +9,12 @@ In order to install this image, or rather /rebase/ to it, all that should be
 needed is to run the following command on a Fedora Silverblue installation (or
 its derivatives/spins, ex. uBlue or Kinoite):
 #+begin_src bash
-  $ rpm-ostree rebase ostree-unverified-registry:ghcr.io/bananmellan/silverred
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/bananmellan/silverred
 #+end_src
 After a reboot, your system should have the necessary public key installed in
 order to rebase to the signed version:
 #+begin_src bash
-  $ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/bananmellan/silverred
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/bananmellan/silverred
 #+end_src
 After running this command, rpm-ostree will verify the signature on each release. It is also
 possible to install the public key manually by downloading it and making an
