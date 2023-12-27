@@ -3,6 +3,8 @@
 # Exit on error.
 set -oue pipefail
 
+podman run registry.fedoraproject.org/fedora-toolbox:latest dnf builddep -y emacs
+
 # Enable extended globs.
 shopt -s extglob
 
