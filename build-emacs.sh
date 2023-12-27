@@ -14,5 +14,5 @@ else
     cd /tmp/emacs-*/
     yum builddep -y emacs
     ./configure --with-native-compilation --with-tree-sitter --with-pgtk
-    make -j(nproc)
+    make -j$(nproc)
 fi
