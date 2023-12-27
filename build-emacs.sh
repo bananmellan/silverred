@@ -9,7 +9,7 @@ if ! [ $DISTROBOX_ENTER_PATH ]; then
     tar xvf emacs.tar.xz
     distrobox enter -Y emacs-build -- /tmp/build-emacs.sh
     cd /tmp/emacs-*/
-e    sudo make install
+    sudo make install
 else
     cd /tmp/emacs-*/
     yum builddep -y emacs
