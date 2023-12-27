@@ -7,7 +7,7 @@ if ! [ $DISTROBOX_ENTER_PATH ]; then
          -O /tmp/emacs.tar.xz
     cd /tmp
     tar xvf emacs.tar.xz
-    distrobox enter -Y emacs-build -- /tmp/build-emacs.sh
+    distrobox enter -Y emacs-build -- sh /tmp/build-emacs.sh
     cd /tmp/emacs-*/
     sudo make install
 else

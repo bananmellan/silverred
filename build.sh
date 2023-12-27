@@ -65,4 +65,4 @@ systemctl enable flatpak-system-update.timer
 systemctl --global enable flatpak-user-update.timer
 
 # Build and install Emacs PGTK
-/tmp/build-emacs.sh
+sh /tmp/build-emacs.sh
