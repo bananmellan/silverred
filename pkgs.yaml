@@ -4,6 +4,7 @@ include:
   - wireshark
   - darkman
   - stow
+  - tmux
   - android-tools
   - libtree-sitter
   - gnome-tweaks
