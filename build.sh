@@ -3,6 +3,8 @@ set -oue pipefail
 
 rpm-ostree install \
 		   fish \
+		   distrobox \
+		   wireshark \
 		   darkman \
 		   stow \
 		   android-tools \
