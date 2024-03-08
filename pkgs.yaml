@@ -31,7 +31,7 @@ include:
   - pavucontrol
   - piper
   - python3
-  - virtualenv
+  - python3-virtualenv
   - python3-lsp-server
   - stow
   - tmux
