@@ -1,6 +1,7 @@
 include:
   - apg
   - binutils
+  - bsdtar
   - clang
   - clang-tools-extra
   - cmake
