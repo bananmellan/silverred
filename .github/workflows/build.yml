@@ -3,7 +3,7 @@ on:
   pull_request:
   merge_group:
   schedule:
-   - cron: '0 3 * * 1'
+   - cron: '40 6 * * *'
   # push:
   #   branches:
   #     - main
