@@ -46,6 +46,7 @@ include:
   - nmon
   - wl-clipboard
   - helvum
+  - sshfs
 
 exclude:
   - firefox
