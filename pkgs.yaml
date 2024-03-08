@@ -14,6 +14,7 @@ include:
   - gnome-shell-extension-system-monitor-applet
   - gpm-libs
   - libgccjit
+  - libvterm
   - inotify-tools
   - libadwaita
   - libratbag-ratbagd
