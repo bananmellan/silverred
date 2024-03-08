@@ -27,7 +27,6 @@ include:
   - libtree-sitter
   - lld
   - make
-  - mpv
   - nmap
   - nmon
   - openssl
