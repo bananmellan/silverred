@@ -39,6 +39,7 @@ include:
   - virt-viewer
   - wireguard-tools
   - qemu
+  - NetworkManager-l2tp
 
 exclude:
   - firefox
