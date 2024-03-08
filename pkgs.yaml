@@ -19,6 +19,8 @@ include:
   # For Emacs
   - gpm-libs
   - libgccjit
+  - libvterm
+  - libtool
 
   # Gnome
   - gnome-boxes
