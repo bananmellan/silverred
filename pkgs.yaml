@@ -53,6 +53,7 @@ include:
   - texlive-ulem
   - texlive-capt-of
   - libvterm
+  - tlp
 
 exclude:
   - firefox
