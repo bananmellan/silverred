@@ -51,6 +51,7 @@ include:
   - texlive-wrapfig
   - texlive-ulem
   - texlive-capt-of
+  - libvterm
 
 exclude:
   - firefox
