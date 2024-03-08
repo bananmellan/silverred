@@ -54,6 +54,7 @@ include:
   - texlive-capt-of
   - libvterm
   - tlp
+  - f38-backgrounds-gnome
 
 exclude:
   - firefox
