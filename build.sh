@@ -31,7 +31,8 @@ rpm-ostree install \
 rpm-ostree override remove \
 		   firefox \
 		   firefox-langpacks \
-		   gnome-tour
+		   gnome-tour \
+		   nvidia-gpu-firmware
 
 # Ensure scripts are executable.
 find /usr/share/silverred/scripts -type f -exec bash -c 'chmod +x {}' \;
