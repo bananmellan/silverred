@@ -12,7 +12,6 @@ rpm-ostree install \
 		   stow \
 		   android-tools \
 		   libtree-sitter \
-		   evolution \
 		   gnome-tweaks \
 		   gnome-boxes \
 		   gnome-shell-extension-dash-to-dock \
