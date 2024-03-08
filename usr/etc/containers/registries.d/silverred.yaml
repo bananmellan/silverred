@@ -1,0 +1,3 @@
+docker:
+  ghcr.io/bananmellan:
+    use-sigstore-attachments: true
