@@ -10,6 +10,10 @@ shopt -s extglob
 REPODIR=/usr/etc/yum.repos.d
 if [ -d $REPODIR ]; then
 	pushd /usr/etc/yum.repos.d
+	echo Contents of /usr/etc:
+	ls -l /usr/etc
+	echo Contents of /etc:
+	ls -l /etc
 	echo Removing nonfree repos:
 	rm -vf !(fedora*.repo)
 	popd
