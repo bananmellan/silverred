@@ -48,6 +48,7 @@ include:
   - wl-clipboard
   - fastfetch
   - the_silver_searcher
+  - texlive
   - texlive-wrapfig
   - texlive-ulem
   - texlive-capt-of
