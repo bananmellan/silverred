@@ -1,6 +1,18 @@
-* Fedora Silverred
+* Fedora "Silverred"
 "Silverred" is my attempt at making my own custom OS based on Fedora Silverblue
-OCI images. The container image is built using Fedora's own [[quay.io/fedora-ostree-desktops/silverblue][OSTree Desktop
+OCI images. The container image is built using Fedora's own [[https://quay.io/fedora-ostree-desktops/silverblue][OSTree Desktop
 Images]], but the code is /heavily/ inspired (or rather ripped off) from the
 [[https://universal-blue.org/][Universal Blue (uBlue)]] project, using their [[https://github.com/ublue-os/main][main]], [[https://github.com/ublue-os/config][config]] and [[https://github.com/ublue-os/startingpoint][starting point]]
 repositories.
+** Using this image
+In order to install this image, or rather /rebase/ to it, all that should be
+needed is to run the following command on a Fedora Silverblue installation (or
+its derivatives/spins, ex. uBlue or Kinoite):
+#+begin_src bash
+  $ rpm-ostree rebase ostree-unverified-registry:ghcr.io/bananmellan/silverred
+#+end_src
+After a reboot, your system should have the necessary public key installed in
+order to upgrade while also verifying the signatures on each release. It is also
+possible to install the public key manually by downloading it and making an
+entry for ghcr.io/bananmellan in `/etc/containers/policy.json` which also points
+to the public key.
