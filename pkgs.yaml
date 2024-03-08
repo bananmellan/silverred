@@ -40,6 +40,7 @@ include:
   - wireguard-tools
   - qemu
   - NetworkManager-l2tp
+  - wireshark
 
 exclude:
   - firefox
