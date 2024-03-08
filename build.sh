@@ -52,9 +52,6 @@ else
     echo No packages to install.
 fi
 
-# Ensure scripts are executable.
-# find /usr/share/silverred/scripts -type f -exec bash -c 'chmod +x {}' \;
-
 # Add public key.
 mkdir -p /usr/etc/pki/containers
 cp /usr/share/silverred/cosign.pub /usr/etc/pki/containers/silverred.pub
@@ -63,6 +60,3 @@ cp /usr/share/silverred/cosign.pub /usr/etc/pki/containers/silverred.pub
 systemctl enable rpm-ostreed-automatic.timer
 systemctl enable flatpak-system-update.timer
 systemctl --global enable flatpak-user-update.timer
-
-# Compile and install emacs
-sh /tmp/build-emacs.sh
