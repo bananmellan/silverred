@@ -45,6 +45,7 @@ include:
   - htop
   - nmon
   - wl-clipboard
+  - helvum
 
 exclude:
   - firefox
