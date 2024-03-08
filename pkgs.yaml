@@ -8,7 +8,6 @@ include:
   - android-tools
   - libtree-sitter
   - gnome-tweaks
-  - gnome-boxes
   - gnome-shell-extension-dash-to-dock
   - gnome-shell-extension-caffeine
   - gnome-shell-extension-system-monitor-applet
