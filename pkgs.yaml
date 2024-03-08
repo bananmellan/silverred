@@ -12,6 +12,7 @@ include:
   - jq
   - virt-viewer
   - apg
+  - lld
 
   # Development
   - emacs
