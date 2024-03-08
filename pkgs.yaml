@@ -1,4 +1,5 @@
 include:
+  # OS
   - fish
   - distrobox
   - wireshark
@@ -7,20 +8,33 @@ include:
   - tmux
   - android-tools
   - libtree-sitter
+  - inotify-tools
+
+  # Development
   - clang
   - clang-tools-extra
+  - cmake
+  - make
+
+  # For Emacs
+  - gpm-libs
+  - libgccjit
+
+  # Gnome
   - gnome-boxes
   - gnome-console
   - gnome-tweaks
+  ## Extensions
   - gnome-shell-extension-dash-to-dock
   - gnome-shell-extension-caffeine
   - gnome-shell-extension-auto-move-windows
-  - gpm-libs
-  - libgccjit
-  - inotify-tools
+
+  # Misc
   - libadwaita
-  - libratbag-ratbagd
+  ## Mouse configuration tool
   - piper
+  - libratbag-ratbagd
+
   - libotf
   - openssl
   - pavucontrol
