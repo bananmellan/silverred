@@ -21,6 +21,7 @@ include:
   - julia
   - libadwaita
   - libarchive
+  - libgccjit
   - libotf
   - libratbag-ratbagd
   - libtool
