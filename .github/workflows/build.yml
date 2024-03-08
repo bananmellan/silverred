@@ -19,7 +19,7 @@ env:
 jobs:
   push-ghcr:
     name: Build and push image
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
@@ -109,3 +109,13 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           echo "${{ toJSON(steps.push.outputs) }}"
+  clean-ghcr:
+    name: Delete old container images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete images older than a week
+        uses: snok/container-retention-policy@v2
+        with:
+          cut-off: A week ago UTC
+          image-names: silverred
+          token: ${{ secrets.PAT }}
