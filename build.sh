@@ -40,6 +40,7 @@ rpm-ostree install \
 		   gnome-shell-extension-caffeine \
 		   gnome-shell-extension-system-monitor-applet \
 		   gpm-libs \
+                   libgccjit \
 		   inotify-tools \
 		   libadwaita \
 		   libratbag-ratbagd \
