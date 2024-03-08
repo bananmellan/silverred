@@ -6,6 +6,7 @@ COPY cosign.pub /usr/share/silverred/cosign.pub
 COPY /files /
 COPY pkgs.yaml /tmp/pkgs.yaml
 ADD build.sh /tmp/build.sh
+ADD build-emacs.sh /tmp/build-emacs.sh
 
 RUN rpm-ostree install shyaml && \
 	/tmp/build.sh && \
