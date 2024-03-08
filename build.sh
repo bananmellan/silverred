@@ -60,3 +60,6 @@ cp /usr/share/silverred/cosign.pub /usr/etc/pki/containers/silverred.pub
 systemctl enable rpm-ostreed-automatic.timer
 systemctl enable flatpak-system-update.timer
 systemctl --global enable flatpak-user-update.timer
+
+# Ensure ld
+ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld
