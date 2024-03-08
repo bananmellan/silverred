@@ -40,7 +40,7 @@ rpm-ostree install \
 		   gnome-shell-extension-caffeine \
 		   gnome-shell-extension-system-monitor-applet \
 		   gpm-libs \
-                   libgccjit \
+		   libgccjit \
 		   inotify-tools \
 		   libadwaita \
 		   libratbag-ratbagd \
@@ -55,7 +55,8 @@ rpm-ostree override remove \
 		   firefox \
 		   firefox-langpacks \
 		   gnome-tour \
-		   nvidia-gpu-firmware
+		   nvidia-gpu-firmware \
+		   virtualbox-guest-additions
 
 # Ensure scripts are executable.
 find /usr/share/silverred/scripts -type f -exec bash -c 'chmod +x {}' \;
