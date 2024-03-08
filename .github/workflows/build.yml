@@ -26,7 +26,9 @@ jobs:
         with:
           cut-off: A week ago UTC
           image-names: silverred
-          token: ${{ secrets.PAT }}
+          account-type: personal
+          token: ${{ secrets.GITHUB_TOKEN }}
+          token-type: github-token
   push-ghcr:
     name: Build and push image
     runs-on: ubuntu-latest
