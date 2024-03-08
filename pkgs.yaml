@@ -27,9 +27,3 @@ exclude:
   - gnome-tour
   - nvidia-gpu-firmware
   - virtualbox-guest-additions
-  - gnome-software-rpm-ostree
-  - google-noto-fonts-common
-  - google-noto-sans-vf-fonts
-  - google-droid-sans-fonts
-  - google-noto-emoji-color-fonts
-  - julietaula-montserrat-fonts
