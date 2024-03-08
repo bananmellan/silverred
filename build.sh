@@ -53,7 +53,7 @@ else
 fi
 
 # Ensure scripts are executable.
-find /usr/share/silverred/scripts -type f -exec bash -c 'chmod +x {}' \;
+# find /usr/share/silverred/scripts -type f -exec bash -c 'chmod +x {}' \;
 
 # Add public key.
 mkdir -p /usr/etc/pki/containers
