@@ -44,6 +44,7 @@ include:
   - wireshark
   - htop
   - nmon
+  - wl-clipboard
 
 exclude:
   - firefox
