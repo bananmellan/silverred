@@ -7,8 +7,23 @@ set -oue pipefail
 shopt -s extglob
 
 # Remove unnecessary (non-free) repos and keys.
-pushd /usr/etc/yum.repos.d && rm -f !(fedora*.repo) && popd
-rm -rf /usr/share/distribution-gpg-keys/rpmfusion
+REPODIR=/usr/etc/yum.repos.d
+if [ -d $REPODIR ]; then
+	pushd /usr/etc/yum.repos.d
+	echo Removing nonfree repos:
+	rm -vf !(fedora*.repo)
+	popd
+else
+	echo Repo directory not found! Skipping removal of non-free repos.
+fi
+
+FUSIONKEYDIR=/usr/share/distribution-gpg-keys/rpmfusion
+if [ -d $FUSIONKEYDIR ]; then
+	echo Removing RPMfusion keys.
+	rm -rvf $FUSIONKEYDIR
+else
+	echo RPMfusion key directory not found, skipping removal of these keys.
+fi
 
 # Install packages.
 rpm-ostree install \
