@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Exit on error.
-set -oue pipefail
+set -ouex pipefail
 
 # Enable extended globs.
 shopt -s extglob
