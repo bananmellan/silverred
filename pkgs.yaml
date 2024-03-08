@@ -17,9 +17,9 @@ include:
   - libarchive
   - pam-u2f
   - pamu2fcfg
+  - mpv
 
   # Development
-  - emacs
   - clang
   - clang-tools-extra
   - cmake
@@ -29,6 +29,7 @@ include:
   - python3-lsp-server
 
   # For Emacs
+  - emacs
   - gpm-libs
   - libgccjit
   - libvterm
@@ -42,10 +43,13 @@ include:
   ## Extensions
   - gnome-shell-extension-dash-to-dock
   - gnome-shell-extension-caffeine
-  - gnome-shell-extension-auto-move-windows
 
   # Misc
   - libadwaita
+  - libotf
+  - openssl
+  - pavucontrol
+  - neovim
   
   ## Mouse configuration tool
   - piper
@@ -53,11 +57,6 @@ include:
 
   # Network
   - nmap
-
-  - libotf
-  - openssl
-  - pavucontrol
-  - neovim
 exclude:
   - firefox
   - firefox-langpacks
