@@ -55,6 +55,7 @@ include:
   - libvterm
   - tlp
   - f38-backgrounds-gnome
+  - podman-compose
 
 exclude:
   - firefox
