@@ -16,21 +16,7 @@ env:
     IMAGE_NAME: silverred
     IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 
-jobs:
-  clean-ghcr:
-    name: Delete old container images
-    runs-on: ubuntu-latest
-    steps:
-      - name: Delete images older than a week
-        uses: snok/container-retention-policy@v2
-        with:
-          cut-off: A week ago UTC
-          image-names: silverred
-          account-type: personal
-          keep-at-least: 3
-          token: ${{ secrets.GITHUB_TOKEN }}
-          token-type: github-token
-          
+jobs:  
   push-ghcr:
     name: Build and push image
     runs-on: ubuntu-latest
@@ -123,3 +109,17 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           echo "${{ toJSON(steps.push.outputs) }}"
+          
+  clean-ghcr:
+    name: Delete old container images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete images older than a week
+        uses: snok/container-retention-policy@v2
+        with:
+          cut-off: A week ago UTC
+          image-names: silverred
+          account-type: personal
+          keep-at-least: 3
+          token: ${{ secrets.GITHUB_TOKEN }}
+          token-type: github-token
