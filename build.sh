@@ -5,8 +5,6 @@ cp --preserve=timestamps -r /tmp/root/* /
 find /usr/share/silverred/scripts -type f -exec bash -c 'chmod +x {}' \;
 
 rpm-ostree install \
-
-		   # Packages to install
 		   fish \
 		   distrobox \
 		   wireshark \
@@ -30,8 +28,6 @@ rpm-ostree install \
 		   podman-compose
 
 rpm-ostree override remove \
-
-		   # Packages to remove (override)
 		   firefox \
 		   firefox-langpacks \
 		   gnome-tour
