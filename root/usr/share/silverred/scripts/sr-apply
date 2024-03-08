@@ -2,13 +2,10 @@
 UNAME=`id -nu 1000`
 BASE='/usr/share/silverred/files'
 EBASE="${BASE//\//\\\/}"
-TBASE=`mktemp -d`
-ETBASE="${TBASE//\//\\\/}"
 
 find $BASE -type f -exec bash -c '
 TARGET=`echo {} | sed "s/'$EBASE'//"`
-mkdir -p `dirname $TARGET`
-if [ ! -f $TARGET ] || [ $TARGET -ot {} ]; then
+if [ ! -f $TARGET ] || ! diff {} $TARGET; then
    if grep "<..name..>" {} > /dev/null; then
 	  if id -nu 1000 > /dev/null; then
 		 cp --preserve=timestamps -r {} $TARGET
