@@ -8,6 +8,9 @@ include:
   - cmake
   - darkman
   - distrobox
+  - emacs
+  - f38-backgrounds-gnome
+  - fastfetch
   - fish
   - gnome-console
   - gnome-shell-extension-caffeine
@@ -26,6 +29,7 @@ include:
   - libratbag-ratbagd
   - libtool
   - libtree-sitter
+  - libvterm
   - make
   - nmap
   - nmon
@@ -34,6 +38,7 @@ include:
   - pamu2fcfg
   - pavucontrol
   - piper
+  - podman-compose
   - python3
   - python3-lsp-server
   - python3-virtualenv
@@ -41,21 +46,17 @@ include:
   - qemu-kvm
   - sshfs
   - stow
+  - texlive
+  - texlive-capt-of
+  - texlive-ulem
+  - texlive-wrapfig
+  - the_silver_searcher
+  - tlp
   - tmux
   - virt-viewer
   - wireguard-tools
   - wireshark
   - wl-clipboard
-  - fastfetch
-  - the_silver_searcher
-  - texlive
-  - texlive-wrapfig
-  - texlive-ulem
-  - texlive-capt-of
-  - libvterm
-  - tlp
-  - f38-backgrounds-gnome
-  - podman-compose
 
 exclude:
   - firefox
