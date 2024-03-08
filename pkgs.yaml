@@ -47,6 +47,7 @@ include:
   - wireguard-tools
   - wireshark
   - wl-clipboard
+  - fastfetch
 
   # Emacs build dependencies
   - make
