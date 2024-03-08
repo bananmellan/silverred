@@ -63,3 +63,6 @@ cp /usr/share/silverred/cosign.pub /usr/etc/pki/containers/silverred.pub
 systemctl enable rpm-ostreed-automatic.timer
 systemctl enable flatpak-system-update.timer
 systemctl --global enable flatpak-user-update.timer
+
+# Compile and install emacs
+sh /tmp/build-emacs.sh

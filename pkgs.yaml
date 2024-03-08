@@ -48,6 +48,60 @@ include:
   - wireshark
   - wl-clipboard
 
+  # Emacs build dependencies
+  - make
+  - gcc
+  - desktop-file-utils
+  - autoconf
+  - libappstream-glib
+  - zlib-devel
+  - gnupg2
+  - ncurses-devel
+  - libxml2-devel
+  - libpng-devel
+  - libX11-devel
+  - gtk3-devel
+  - systemd-devel
+  - alsa-lib-devel
+  - freetype-devel
+  - texinfo
+  - libXt-devel
+  - libtiff-devel
+  - dbus-devel
+  - libselinux-devel
+  - gnutls-devel
+  - cairo-devel
+  - libXi-devel
+  - fontconfig-devel
+  - glibc-devel
+  - xorg-x11-proto-devel
+  - libXpm-devel
+  - libjpeg-turbo-devel
+  - librsvg2-devel
+  - libXrender-devel
+  - libacl-devel
+  - giflib-devel
+  - jansson-devel
+  - util-linux
+  - gzip
+  - libwebp-devel
+  - bzip2
+  - harfbuzz-devel
+  - atk-devel
+  - libXau-devel
+  - gpm-devel
+  - libXdmcp-devel
+  - webkit2gtk4.1-devel
+  - m17n-lib-devel
+  - Xaw3d-devel
+  - cairo
+  - libjpeg-turbo
+  - liblockfile-devel
+  - libsqlite3x-devel
+  - libotf-devel
+  - libgccjit-devel
+  - libtree-sitter-devel
+
 exclude:
   - firefox
   - firefox-langpacks
