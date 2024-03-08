@@ -15,6 +15,7 @@ rpm-ostree install \
 		   gpm-libs \
 		   inotify-tools \
 		   libadwaita \
+		   libratbag-ratbagd \
 		   piper \
 		   libtree-sitter \
 		   libotf
