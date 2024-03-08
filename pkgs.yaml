@@ -26,7 +26,6 @@ include:
   - libratbag-ratbagd
   - libtool
   - libtree-sitter
-  - lld
   - make
   - nmap
   - nmon
@@ -48,6 +47,7 @@ include:
   - wireshark
   - wl-clipboard
   - fastfetch
+  - the_silver_searcher
 
 exclude:
   - firefox
