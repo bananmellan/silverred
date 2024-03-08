@@ -9,6 +9,9 @@ include:
   - android-tools
   - libtree-sitter
   - inotify-tools
+  - jq
+  - virt-viewer
+  - apg
 
   # Development
   - emacs
@@ -16,6 +19,9 @@ include:
   - clang-tools-extra
   - cmake
   - make
+  - julia
+  - python3
+  - python3-lsp-server
 
   # For Emacs
   - gpm-libs
@@ -27,6 +33,7 @@ include:
   - gnome-boxes
   - gnome-console
   - gnome-tweaks
+  
   ## Extensions
   - gnome-shell-extension-dash-to-dock
   - gnome-shell-extension-caffeine
@@ -34,9 +41,14 @@ include:
 
   # Misc
   - libadwaita
+  
   ## Mouse configuration tool
   - piper
   - libratbag-ratbagd
+
+  # Network
+  - nmap
+  - dig
 
   - libotf
   - openssl
