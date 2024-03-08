@@ -8,7 +8,6 @@ COPY pkgs.yaml /tmp/pkgs.yaml
 ADD build.sh /tmp/build.sh
 
 RUN rpm-ostree install shyaml && \
-	chmod +x /tmp/build.sh && \
 	/tmp/build.sh && \
 	rm -rf /tmp/* /var/* && \
 	ostree container commit
