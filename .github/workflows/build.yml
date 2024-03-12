@@ -109,7 +109,8 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           echo "${{ toJSON(steps.push.outputs) }}"
-          
+
+  # Requires read and write permissions to be granted for workflows on this repo
   clean-ghcr:
     name: Prune old images
     needs: push-ghcr
