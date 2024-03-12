@@ -16,20 +16,13 @@ include:
   - gnome-shell-extension-caffeine
   - gnome-shell-extension-dash-to-dock
   - gnome-tweaks
-  - gpm-libs
   - helvum
   - htop
   - inotify-tools
   - jq
   - julia
-  - libadwaita
   - libarchive
-  - libgccjit
-  - libotf
   - libratbag-ratbagd
-  - libtool
-  - libtree-sitter
-  - libvterm
   - make
   - nmap
   - nmon
@@ -53,16 +46,34 @@ include:
   - the_silver_searcher
   - tlp
   - tmux
-  - virt-viewer
-  - wireguard-tools
   - wireshark
   - wl-clipboard
 
 exclude:
+  - desktop-backgrounds-gnome
   - firefox
   - firefox-langpacks
+  - gnome-shell-extension-background-logo
   - gnome-terminal
   - gnome-terminal-nautilus
   - gnome-tour
+  - gnome-user-docs
   - nvidia-gpu-firmware
   - virtualbox-guest-additions
+  - xorg-x11-drv-amdgpu
+  - xorg-x11-drv-ati
+  - xorg-x11-drv-evdev
+  - xorg-x11-drv-fbdev
+  - xorg-x11-drv-intel
+  - xorg-x11-drv-libinput
+  - xorg-x11-drv-nouveau
+  - xorg-x11-drv-nouveau
+  - xorg-x11-drv-openchrome
+  - xorg-x11-drv-qxl
+  - xorg-x11-drv-vesa
+  - xorg-x11-drv-vmware
+  - xorg-x11-drv-wacom
+  - xorg-x11-server-Xorg
+  - xorg-x11-xauth
+  - xorg-x11-xinit
+  - yelp
