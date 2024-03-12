@@ -111,7 +111,8 @@ jobs:
           echo "${{ toJSON(steps.push.outputs) }}"
           
   clean-ghcr:
-    name: Delete old container images
+    name: Prune old images
+    needs: push-ghcr
     runs-on: ubuntu-latest
     steps:
       - name: Delete images older than a week
@@ -120,6 +121,6 @@ jobs:
           cut-off: A week ago UTC
           image-names: silverred
           account-type: personal
-          keep-at-least: 3
+          keep-at-least: 9
           token: ${{ secrets.GITHUB_TOKEN }}
           token-type: github-token
