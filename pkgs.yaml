@@ -48,7 +48,7 @@ include:
   - tmux
   - wireshark
   - wl-clipboard
-  - libvterm
+  - libtool
 
 exclude:
   - desktop-backgrounds-gnome
