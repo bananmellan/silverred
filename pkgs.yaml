@@ -13,6 +13,7 @@ include:
   - fastfetch
   - fish
   - gnome-console
+  - gnome-boxes
   - gnome-shell-extension-caffeine
   - gnome-shell-extension-dash-to-dock
   - gnome-tweaks
@@ -23,6 +24,7 @@ include:
   - julia
   - libarchive
   - libratbag-ratbagd
+  - libtool
   - make
   - nmap
   - nmon
@@ -48,7 +50,6 @@ include:
   - tmux
   - wireshark
   - wl-clipboard
-  - libtool
 
 exclude:
   - desktop-backgrounds-gnome
