@@ -4,19 +4,19 @@ on:
   merge_group:
   schedule:
    - cron: '40 6 * * *'
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "**.md"
-      - "**.txt"
-      - "**.org"
+  # push:
+  #   branches:
+  #     - main
+  #   paths-ignore:
+  #     - "**.md"
+  #     - "**.txt"
+  #     - "**.org"
   workflow_dispatch:
 env:
     IMAGE_NAME: silverred
     IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 
-jobs:  
+jobs:
   push-ghcr:
     name: Build and push image
     runs-on: ubuntu-latest
