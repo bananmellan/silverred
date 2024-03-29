@@ -6,6 +6,7 @@ include:
   - clang
   - clang-tools-extra
   - cmake
+  - chromium
   - darkman
   - distrobox
   - emacs
