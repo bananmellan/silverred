@@ -65,9 +65,9 @@ systemctl --global enable flatpak-user-update.timer
 ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld
 
 # Ensure "emacs" is in path
-if ! [ -x /usr/bin/emacs ]; then
-    EMACS_BIN_PATH=$(echo -n /usr/bin/emacs-*.* | awk '{print $1}')
-    if [ -x "$EMACS_BIN_PATH" ]; then
-        ln -s $EMACS_BIN_PATH /usr/bin/emacs
-    fi
-fi
+# if ! [ -x /usr/bin/emacs ]; then
+#     EMACS_BIN_PATH=$(echo -n /usr/bin/emacs-*.* | awk '{print $1}')
+#     if [ -x "$EMACS_BIN_PATH" ]; then
+#         ln -s $EMACS_BIN_PATH /usr/bin/emacs
+#     fi
+# fi
