@@ -37,7 +37,6 @@ include:
   - python3
   - python3-lsp-server
   - python3-virtualenv
-  - pipewire-plugin-jack
   - qemu-kvm
   - sshfs
   - stow
