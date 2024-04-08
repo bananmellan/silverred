@@ -69,7 +69,7 @@ EZA_LOC=`whereis -b eza | awk '{print $2}'`
 LS_LOC=`whereis -b ls | awk '{print $2}'`
 if [ -x "$LS_LOC" ] && [ -x "$EZA_LOC" ]; then
   rm -v $LS_LOC
-  ln -s $EZA_LOC $LS_LOC
+  ln -vs $EZA_LOC $LS_LOC
 fi
 
 # Ensure "emacs" is in path
