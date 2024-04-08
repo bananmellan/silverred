@@ -64,6 +64,14 @@ systemctl --global enable flatpak-user-update.timer
 # Ensure ld is in path
 ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld
 
+# Replace ls with eza, if it exists
+EZA_LOC=`whereis -b eza | awk '{print $2}'`
+LS_LOC=`whereis -b ls | awk '{print $2}'`
+if [ -x "$LS_LOC" ] && [ -x "$EZA_LOC" ]; then
+  rm -v $LS_LOC
+  ln -s $EZA_LOC $LS_LOC
+fi
+
 # Ensure "emacs" is in path
 # if ! [ -x /usr/bin/emacs ]; then
 #     EMACS_BIN_PATH=$(echo -n /usr/bin/emacs-*.* | awk '{print $1}')
