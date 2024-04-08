@@ -9,6 +9,7 @@ include:
   - chromium
   - darkman
   - distrobox
+  - eza
   - f38-backgrounds-gnome
   - fastfetch
   - fish
