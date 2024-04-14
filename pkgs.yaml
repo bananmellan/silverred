@@ -11,7 +11,6 @@ include:
   - distrobox
   - eza
   - doas
-  - emacs
   - f38-backgrounds-gnome
   - fastfetch
   - fish
