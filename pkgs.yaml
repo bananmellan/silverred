@@ -10,6 +10,8 @@ include:
   - darkman
   - distrobox
   - eza
+  - doas
+  - emacs
   - f38-backgrounds-gnome
   - fastfetch
   - fish
@@ -59,3 +61,4 @@ exclude:
   - nvidia-gpu-firmware
   - virtualbox-guest-additions
   - yelp
+  - sudo

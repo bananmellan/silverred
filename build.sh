@@ -73,9 +73,14 @@ if [ -x "$LS_LOC" ] && [ -x "$EZA_LOC" ]; then
 fi
 
 # Ensure "emacs" is in path
-# if ! [ -x /usr/bin/emacs ]; then
-#     EMACS_BIN_PATH=$(echo -n /usr/bin/emacs-*.* | awk '{print $1}')
-#     if [ -x "$EMACS_BIN_PATH" ]; then
-#         ln -s $EMACS_BIN_PATH /usr/bin/emacs
-#     fi
-# fi
+if ! [ -x /usr/bin/emacs ]; then
+    EMACS_BIN_PATH=$(echo -n /usr/bin/emacs-*.* | awk '{print $1}')
+    if [ -x "$EMACS_BIN_PATH" ]; then
+        ln -s $EMACS_BIN_PATH /usr/bin/emacs
+    fi
+fi
+
+# Replace sudo with doas
+if [ -x /usr/bin/doas ] && [ ! -x /usr/bin/sudo ]; then
+    ln -vs /usr/bin/doas /usr/bin/sudo
+fi
