@@ -61,4 +61,3 @@ exclude:
   - nvidia-gpu-firmware
   - virtualbox-guest-additions
   - yelp
-  - sudo
