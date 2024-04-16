@@ -12,7 +12,7 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
 fi
 
-DISK_UUID=$(sudo awk '{ print $2 }' /etc/crypttab | cut -d= -f2)
+DISK_UUID=$(awk '{ print $2 }' /etc/crypttab | cut -d= -f2)
 CRYPT_DISK="/dev/disk/by-uuid/$DISK_UUID"
 
 ## Restore the crypttab
