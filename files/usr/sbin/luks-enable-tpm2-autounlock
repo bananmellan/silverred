@@ -15,7 +15,7 @@ fi
 ## Inspect crypttab to find disk info, should look like this
 #sudo cat /etc/crypttab
 #luks-912462a2-39ce-abcd-1234-89c6c0304cb4 UUID=912462a2-39ce-abcd-1234-89c6c0304cb4 none discard
-DISK_UUID=$(sudo awk '{ print $2 }' /etc/crypttab | cut -d= -f2)
+DISK_UUID=$(awk '{ print $2 }' /etc/crypttab | cut -d= -f2)
 CRYPT_DISK="/dev/disk/by-uuid/$DISK_UUID"
 
 ## Backup the crypttab
