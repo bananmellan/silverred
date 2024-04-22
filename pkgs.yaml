@@ -10,6 +10,7 @@ include:
   - darkman
   - distrobox
   - eza
+  - emacs
   - doas
   - f38-backgrounds-gnome
   - fastfetch
