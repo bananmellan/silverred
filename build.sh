@@ -66,12 +66,12 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && \
     ln -sf /etc/alternatives/ld /usr/bin/ld
 
 # Replace ls with eza, if it exists
-EZA_LOC=`whereis -b eza | awk '{print $2}'`
-LS_LOC=`whereis -b ls | awk '{print $2}'`
-if [ -x "$LS_LOC" ] && [ -x "$EZA_LOC" ]; then
-  rm -v $LS_LOC
-  ln -vs $EZA_LOC $LS_LOC
-fi
+# EZA_LOC=`whereis -b eza | awk '{print $2}'`
+# LS_LOC=`whereis -b ls | awk '{print $2}'`
+# if [ -x "$LS_LOC" ] && [ -x "$EZA_LOC" ]; then
+#   rm -v $LS_LOC
+#   ln -vs $EZA_LOC $LS_LOC
+# fi
 
 # Ensure emacs is in path
 if ! [ -x /usr/bin/emacs ]; then
@@ -79,10 +79,4 @@ if ! [ -x /usr/bin/emacs ]; then
     if [ -x "$EMACS_BIN_PATH" ]; then
         ln -vs $EMACS_BIN_PATH /usr/bin/emacs
     fi
-fi
-
-# Replace sudo with doas
-if [ -x /usr/bin/doas ]; then
-    rm -v /usr/bin/sudo
-    ln -vs /usr/bin/doas /usr/bin/sudo
 fi
