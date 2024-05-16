@@ -22,7 +22,6 @@ include:
   - htop
   - inotify-tools
   - jq
-  - julia
   - libarchive
   - libratbag-ratbagd
   - libtool
