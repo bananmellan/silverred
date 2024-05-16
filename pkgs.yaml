@@ -13,6 +13,7 @@ include:
   - f38-backgrounds-gnome
   - fastfetch
   - fish
+  - genius
   - gnome-console
   - gnome-boxes
   - gnome-shell-extension-caffeine
