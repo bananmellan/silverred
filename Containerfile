@@ -1,7 +1,6 @@
 ARG FEDORA_MAJOR_VERSION=40
 
-# FROM quay.io/fedora-ostree-desktops/silverblue:${FEDORA_MAJOR_VERSION}
-FROM ghcr.io/ublue-os/base:latest
+FROM quay.io/fedora-ostree-desktops/silverblue:${FEDORA_MAJOR_VERSION}
 
 COPY cosign.pub /usr/share/silverred/cosign.pub
 COPY /files /
