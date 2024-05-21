@@ -53,6 +53,7 @@ exclude:
   - desktop-backgrounds-gnome
   - firefox
   - firefox-langpacks
+  - gnome-shell-extension-apps-menu
   - gnome-shell-extension-background-logo
   - gnome-terminal
   - gnome-terminal-nautilus
