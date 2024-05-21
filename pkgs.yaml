@@ -18,6 +18,7 @@ include:
   - gnome-boxes
   - gnome-shell-extension-caffeine
   - gnome-shell-extension-dash-to-dock
+  - gnome-shell-extension-auto-move-windows
   - gnome-tweaks
   - helvum
   - htop
@@ -44,6 +45,7 @@ include:
   - the_silver_searcher
   - tlp
   - tmux
+  - waypipe
   - wireshark
   - wl-clipboard
 
