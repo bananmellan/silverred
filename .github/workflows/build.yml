@@ -27,7 +27,7 @@ jobs:
     steps:
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
-        uses: actions/checkout@v4.1.4
+        uses: actions/checkout@v4
 
       - name: Generate tags
         id: generate-tags
@@ -48,7 +48,7 @@ jobs:
       # Build image using Buildah action
       - name: Build Image
         id: build_image
-        uses: redhat-actions/buildah-build@v2.13
+        uses: redhat-actions/buildah-build@v2
         with:
           containerfiles: |
             ./Containerfile
@@ -57,7 +57,7 @@ jobs:
             ${{ steps.generate-tags.outputs.alias_tags }}
             ${{ steps.generate-tags.outputs.date }}
             ${{ steps.generate-tags.outputs.sha_short }}
-          oci: true
+          oci: false
 
       # Workaround bug where capital letters in your GitHub username make it impossible to push to GHCR.
       # https://github.com/macbre/push-to-ghcr/issues/12
@@ -69,7 +69,7 @@ jobs:
 
       # Push the image to GHCR (Image Registry)
       - name: Push To GHCR
-        uses: redhat-actions/push-to-registry@v2.8
+        uses: redhat-actions/push-to-registry@v2
         id: push
         if: github.event_name != 'pull_request'
         env:
@@ -81,11 +81,9 @@ jobs:
           registry: ${{ steps.registry_case.outputs.lowercase }}
           username: ${{ env.REGISTRY_USER }}
           password: ${{ env.REGISTRY_PASSWORD }}
-          extra-args: |
-            --disable-content-trust
 
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3.1.0
+        uses: docker/login-action@v3
         if: github.event_name != 'pull_request'
         with:
           registry: ghcr.io
