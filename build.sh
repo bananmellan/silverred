@@ -80,3 +80,11 @@ if ! [ -x /usr/bin/emacs ]; then
         ln -vs $EMACS_BIN_PATH /usr/bin/emacs
     fi
 fi
+
+# Install protonvpn
+PROTONVPN_VERSION=1.0.1-2
+pushd `mktemp -d`
+wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d\  -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-$PROTONVPN_VERSION.noarch.rpm"
+rpm-ostree install ./protonvpn-stable-release-$PROTONVPN_VERSION.noarch.rpm
+rpm-ostree install proton-vpn-gnome-desktop
+popd
