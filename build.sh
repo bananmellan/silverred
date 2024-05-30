@@ -97,5 +97,4 @@ mv -v quickemu-*/ /usr/share/quickemu
 ln -vs /usr/share/quickemu/quickemu    /usr/bin/
 ln -vs /usr/share/quickemu/quickget    /usr/bin/
 ln -vs /usr/share/quickemu/quickreport /usr/bin/
-rpm-ostree install
 popd
