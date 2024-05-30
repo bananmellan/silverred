@@ -6,6 +6,16 @@ set -ouex pipefail
 # Enable extended globs.
 shopt -s extglob
 
+# Install quickemu
+pushd `mktemp -d`
+wget https://github.com/quickemu-project/quickemu/archive/refs/tags/4.9.4.tar.gz
+tar --no-overwrite-dir -mzxvf *.tar.gz
+mv -v quickemu-*/ /usr/share/quickemu
+ln -vs /usr/share/quickemu/quickemu    /usr/bin/
+ln -vs /usr/share/quickemu/quickget    /usr/bin/
+ln -vs /usr/share/quickemu/quickreport /usr/bin/
+popd
+
 # Remove unnecessary (non-free) repos and keys.
 REPO_DIR=/etc/yum.repos.d
 if [ -d $REPO_DIR ]; then
@@ -87,14 +97,4 @@ pushd `mktemp -d`
 wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d\  -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-$PROTONVPN_VERSION.noarch.rpm"
 rpm-ostree install ./protonvpn-stable-release-$PROTONVPN_VERSION.noarch.rpm
 rpm-ostree install proton-vpn-gnome-desktop
-popd
-
-# Install quickemu
-pushd `mktemp -d`
-wget https://github.com/quickemu-project/quickemu/archive/refs/tags/4.9.4.tar.gz
-tar xvf *
-mv -v quickemu-*/ /usr/share/quickemu
-ln -vs /usr/share/quickemu/quickemu    /usr/bin/
-ln -vs /usr/share/quickemu/quickget    /usr/bin/
-ln -vs /usr/share/quickemu/quickreport /usr/bin/
 popd
