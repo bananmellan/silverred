@@ -6,16 +6,6 @@ set -ouex pipefail
 # Enable extended globs.
 shopt -s extglob
 
-# Install quickemu
-pushd `mktemp -d`
-wget https://github.com/quickemu-project/quickemu/archive/refs/tags/4.9.4.tar.gz
-tar --no-overwrite-dir -mzxvf *.tar.gz
-mv -v quickemu-*/ /usr/share/quickemu
-ln -vs /usr/share/quickemu/quickemu    /usr/bin/
-ln -vs /usr/share/quickemu/quickget    /usr/bin/
-ln -vs /usr/share/quickemu/quickreport /usr/bin/
-popd
-
 # Remove unnecessary (non-free) repos and keys.
 REPO_DIR=/etc/yum.repos.d
 if [ -d $REPO_DIR ]; then
@@ -90,6 +80,16 @@ if ! [ -x /usr/bin/emacs ]; then
         ln -vs $EMACS_BIN_PATH /usr/bin/emacs
     fi
 fi
+
+# Install quickemu
+pushd `mktemp -d`
+wget https://github.com/quickemu-project/quickemu/archive/refs/tags/4.9.4.tar.gz
+bsdtar xvf *.tar.gz
+mv -v quickemu-*/ /usr/share/quickemu
+ln -vs /usr/share/quickemu/quickemu    /usr/bin/
+ln -vs /usr/share/quickemu/quickget    /usr/bin/
+ln -vs /usr/share/quickemu/quickreport /usr/bin/
+popd
 
 # Install protonvpn
 PROTONVPN_VERSION=1.0.1-2

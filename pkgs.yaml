@@ -8,17 +8,17 @@ include:
   - cmake
   - darkman
   - distrobox
-  - eza
   - doas
+  - eza
   - f38-backgrounds-gnome
   - fastfetch
   - fish
   - genius
-  - gnome-console
   - gnome-boxes
+  - gnome-console
+  - gnome-shell-extension-auto-move-windows
   - gnome-shell-extension-caffeine
   - gnome-shell-extension-dash-to-dock
-  - gnome-shell-extension-auto-move-windows
   - gnome-tweaks
   - helvum
   - htop
@@ -40,6 +40,8 @@ include:
   - python3-lsp-server
   - python3-virtualenv
   - qemu-kvm
+  - samba
+  - spice-gtk-tools
   - sshfs
   - stow
   - the_silver_searcher
@@ -48,8 +50,6 @@ include:
   - waypipe
   - wireshark
   - wl-clipboard
-  - samba
-  - spice-gtk-tools
   - xorriso
 
 exclude:
