@@ -88,3 +88,14 @@ wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d\  -f 
 rpm-ostree install ./protonvpn-stable-release-$PROTONVPN_VERSION.noarch.rpm
 rpm-ostree install proton-vpn-gnome-desktop
 popd
+
+# Install quickemu
+pushd `mktemp -d`
+wget https://github.com/quickemu-project/quickemu/archive/refs/tags/4.9.4.tar.gz
+tar xvf *
+mv -v quickemu-*/ /usr/share/quickemu
+ln -vs /usr/share/quickemu/quickemu    /usr/bin/
+ln -vs /usr/share/quickemu/quickget    /usr/bin/
+ln -vs /usr/share/quickemu/quickreport /usr/bin/
+rpm-ostree install
+popd

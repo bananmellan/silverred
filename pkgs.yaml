@@ -48,6 +48,9 @@ include:
   - waypipe
   - wireshark
   - wl-clipboard
+  - samba
+  - spice-gtk-tools
+  - xorriso
 
 exclude:
   - desktop-backgrounds-gnome
