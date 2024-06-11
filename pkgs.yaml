@@ -51,6 +51,7 @@ include:
   - wireshark
   - wl-clipboard
   - xorriso
+  - virt-viewer
 
 exclude:
   - desktop-backgrounds-gnome
