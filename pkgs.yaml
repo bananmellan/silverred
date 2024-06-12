@@ -52,6 +52,7 @@ include:
   - wl-clipboard
   - xorriso
   - virt-viewer
+  - pass
 
 exclude:
   - desktop-backgrounds-gnome
