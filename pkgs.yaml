@@ -53,6 +53,9 @@ include:
   - xorriso
   - virt-viewer
   - pass
+  - diceware
+  - perl-Image-ExifTool
+  - ImageMagick
 
 exclude:
   - desktop-backgrounds-gnome
