@@ -36,14 +36,12 @@ include:
   - piper
   - podman-compose
   - python3
-  - python3-lsp-server
   - python3-virtualenv
   - qemu-kvm
   - samba
   - spice-gtk-tools
   - sshfs
   - stow
-  - the_silver_searcher
   - tlp
   - tmux
   - waypipe
@@ -54,7 +52,6 @@ include:
   - pass
   - diceware
   - perl-Image-ExifTool
-  - ImageMagick
 
 exclude:
   - desktop-backgrounds-gnome
