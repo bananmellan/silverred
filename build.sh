@@ -95,7 +95,7 @@ popd
 PROTONVPN_VERSION=1.0.1-2
 FEDORA_VERSION=$(cat /etc/fedora-release | cut -d\  -f 3)
 pushd `mktemp -d`
-wget "https://repo.protonvpn.com/fedora-40-stable/protonvpn-stable-release/protonvpn-stable-release-$PROTONVPN_VERSION.noarch.rpm"
+wget "https://repo.protonvpn.com/fedora-$FEDORA_VERSION-stable/protonvpn-stable-release/protonvpn-stable-release-$PROTONVPN_VERSION.noarch.rpm"
 rpm-ostree install ./protonvpn-stable-release-$PROTONVPN_VERSION.noarch.rpm
 rpm-ostree install proton-vpn-gnome-desktop
 popd
