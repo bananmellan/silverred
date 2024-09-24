@@ -14,7 +14,8 @@ include:
   - fish
   - genius
   - gnome-boxes
-  - gnome-console
+  # - gnome-console
+  - ptyxis
   - gnome-shell-extension-auto-move-windows
   - gnome-shell-extension-caffeine
   - gnome-shell-extension-dash-to-dock
