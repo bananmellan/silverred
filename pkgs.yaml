@@ -52,6 +52,7 @@ include:
   - pass
   - diceware
   - perl-Image-ExifTool
+  - langpacks-sv
 
 exclude:
   - desktop-backgrounds-gnome
