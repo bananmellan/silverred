@@ -28,6 +28,7 @@ include:
   - libratbag-ratbagd
   - libtool
   - make
+  - mkosi
   - nmap
   - nmon
   - openssl
