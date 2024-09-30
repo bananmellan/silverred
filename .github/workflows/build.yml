@@ -57,7 +57,7 @@ jobs:
             ./Containerfile
           image: ${{ env.IMAGE_NAME }}
           build-args: |
-            FEDORA_MAJOR_VERSION=${{ FEDORA_MAJOR_VERSION }}
+            FEDORA_MAJOR_VERSION=${FEDORA_MAJOR_VERSION}
           tags: |
             ${{ steps.generate-tags.outputs.alias_tags }}
             ${{ steps.generate-tags.outputs.date }}
@@ -73,7 +73,7 @@ jobs:
             ./Containerfile
           image: ${{ env.IMAGE_BETA_NAME }}
           build-args: |
-            FEDORA_MAJOR_VERSION=${{ FEDORA_MAJOR_BETA_VERSION }}
+            FEDORA_MAJOR_VERSION=${FEDORA_MAJOR_BETA_VERSION}
           tags: |
             ${{ steps.generate-tags.outputs.alias_tags }}
             ${{ steps.generate-tags.outputs.date }}
