@@ -106,7 +106,7 @@ jobs:
       # Push the image to GHCR (Image Registry)
       - name: Push Beta To GHCR
         uses: redhat-actions/push-to-registry@v2
-        id: push
+        id: push_beta
         if: github.event_name != 'pull_request'
         env:
           REGISTRY_USER: ${{ github.actor }}
@@ -126,7 +126,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # Sign container
+      # Sign containers
       - uses: sigstore/cosign-installer@v3.5.0
         if: github.event_name != 'pull_request'
 
