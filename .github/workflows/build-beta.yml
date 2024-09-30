@@ -121,7 +121,7 @@ jobs:
         uses: snok/container-retention-policy@v2.2.1
         with:
           cut-off: A week ago UTC
-          image-names: "silverred*"
+          image-names: silverred-beta
           account-type: personal
           keep-at-least: 9
           token: ${{ secrets.GITHUB_TOKEN }}
