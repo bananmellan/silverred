@@ -92,10 +92,10 @@ ln -vs /usr/share/quickemu/quickreport /usr/bin/
 popd
 
 # Install protonvpn
-PROTONVPN_VERSION=1.0.1-2
-FEDORA_VERSION=$(cat /etc/fedora-release | cut -d\  -f 3)
-pushd `mktemp -d`
-wget "https://repo.protonvpn.com/fedora-$FEDORA_VERSION-stable/protonvpn-stable-release/protonvpn-stable-release-$PROTONVPN_VERSION.noarch.rpm"
-rpm-ostree install ./protonvpn-stable-release-$PROTONVPN_VERSION.noarch.rpm
-rpm-ostree install proton-vpn-gnome-desktop
-popd
+# PROTONVPN_VERSION=1.0.1-2
+# FEDORA_VERSION=$(cat /etc/fedora-release | cut -d\  -f 3)
+# pushd `mktemp -d`
+# wget "https://repo.protonvpn.com/fedora-$FEDORA_VERSION-stable/protonvpn-stable-release/protonvpn-stable-release-$PROTONVPN_VERSION.noarch.rpm"
+# rpm-ostree install ./protonvpn-stable-release-$PROTONVPN_VERSION.noarch.rpm || true
+# rpm-ostree install proton-vpn-gnome-desktop || true
+# popd
