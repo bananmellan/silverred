@@ -13,7 +13,7 @@ include:
   - fastfetch
   - fish
   - genius
-  - gnome-boxes
+  # - gnome-boxes
   # - gnome-console
   - ptyxis
   - gnome-shell-extension-auto-move-windows
