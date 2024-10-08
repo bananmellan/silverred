@@ -39,8 +39,8 @@ include:
   - podman-compose
   - python3
   - python3-virtualenv
+  - qemu
   - qemu-kvm
-  - qemu-system-x86_64
   - samba
   - spice-gtk-tools
   - sshfs
