@@ -3,6 +3,7 @@ include:
   - apg
   - binutils
   - bsdtar
+  - borgbackup
   - clang
   - clang-tools-extra
   - cmake
