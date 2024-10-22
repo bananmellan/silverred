@@ -83,7 +83,7 @@ fi
 
 # Install quickemu
 pushd `mktemp -d`
-wget https://github.com/quickemu-project/quickemu/archive/refs/tags/4.9.4.tar.gz
+wget https://github.com/quickemu-project/quickemu/archive/refs/tags/4.9.6.tar.gz
 bsdtar xvf *.tar.gz
 mv -v quickemu-*/ /usr/share/quickemu
 ln -vs /usr/share/quickemu/quickemu    /usr/bin/
