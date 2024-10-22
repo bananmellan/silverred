@@ -65,22 +65,6 @@ systemctl --global enable flatpak-user-update.timer
 ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && \
     ln -sf /etc/alternatives/ld /usr/bin/ld
 
-# Replace ls with eza, if it exists
-# EZA_LOC=`whereis -b eza | awk '{print $2}'`
-# LS_LOC=`whereis -b ls | awk '{print $2}'`
-# if [ -x "$LS_LOC" ] && [ -x "$EZA_LOC" ]; then
-#   rm -v $LS_LOC
-#   ln -vs $EZA_LOC $LS_LOC
-# fi
-
-# Ensure emacs is in path
-if ! [ -x /usr/bin/emacs ]; then
-    EMACS_BIN_PATH=$(echo -n /usr/bin/emacs-*.* | awk '{print $1}')
-    if [ -x "$EMACS_BIN_PATH" ]; then
-        ln -vs $EMACS_BIN_PATH /usr/bin/emacs
-    fi
-fi
-
 # Install quickemu
 pushd `mktemp -d`
 wget https://github.com/quickemu-project/quickemu/archive/refs/tags/4.9.6.tar.gz
